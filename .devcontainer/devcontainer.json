@@ -1,0 +1,5 @@
+{
+  "name": "unist-util-trim-children",
+  "image": "ghcr.io/hankei6km/h6-dev-containers/images:typescript-node_latest",
+  "remoteUser": "devcontainer"
+}

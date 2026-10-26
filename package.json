@@ -1,0 +1,62 @@
+{
+  "name": "@hankei6km/unist-util-trim-children",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "unist"
+  ],
+  "license": "MIT",
+  "author": "hankei6km <hankei6km@gmail.com> (https://github.com/hankei6km)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankei6km/unist-util-trim-children.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hankei6km/unist-util-trim-children/issues"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./utils/hast": {
+      "types": "./dist/utils/hast/index.d.ts",
+      "import": "./dist/utils/hast/index.js"
+    },
+    "./utils/mdast": {
+      "types": "./dist/utils/mdast/index.d.ts",
+      "import": "./dist/utils/mdast/index.js"
+    }
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test",
+    "test:coverage": "npm run test -- --experimental-test-coverage",
+    "lint:types": "tsc --noEmit -p tsconfig.json",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "hast-util-is-element": "^3.0.0",
+    "mdast-util-phrasing": "^4.1.0",
+    "unist-util-is": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^25.9.2",
+    "@types/unist": "^3.0.3",
+    "hast-util-from-html": "^2.0.3",
+    "hast-util-to-html": "^9.0.5",
+    "hastscript": "^9.0.1",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-to-markdown": "^2.1.2",
+    "typescript": "^7.0.2",
+    "unist-builder": "^4.0.0"
+  }
+}
