@@ -62,6 +62,9 @@ jobs:
       - name: Install modules
         run: npm ci
 
+      - name: Run check types
+        run: npm run lint:types
+
       - name: Run tests
         run: npm run test
 
